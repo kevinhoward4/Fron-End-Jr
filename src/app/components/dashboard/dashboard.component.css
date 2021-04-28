@@ -35,6 +35,25 @@
     border-radius: 50%;
 }
 
+.barraSt {
+    width: 15px;
+    height: 10px;
+    margin: 0px 3px;
+    border: 1px solid;
+}
+
+.barraSt1 {
+    background-color: #56C2D6;
+}
+
+.barraSt2 {
+    background-color: #D6C756;
+}
+
+.barraSt3 {
+    background-color: #DDDDDD;
+}
+
 .cirUp {
     display: flex;
     justify-content: flex-end;
@@ -110,6 +129,24 @@
     font: normal normal 15px/20px Roboto;
 }
 
+.statusData1 {
+    width: 100%;
+    background: #106EB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.statusData2 {
+    width: 100%;
+    background: #106EB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 @media (min-width: 768px) {
     .rect1 {
         width: 905px;
@@ -143,5 +180,17 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+    .statusData1 {
+        flex-direction: row;
+    }
+    .statusData2 {
+        flex-direction: row;
+    }
+    .barraSt {
+        width: 15px;
+        height: 70px;
+        margin: 0px 3px;
+        border: 1px solid;
     }
 }

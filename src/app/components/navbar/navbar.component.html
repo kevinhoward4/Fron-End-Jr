@@ -11,13 +11,16 @@
 
     <div class="verticalLine"></div>
 
-    <div class class="rec-right">
+    <div class="rec-right">
 
-        <div class="text2">
-            <p>
-                Refreshed 12:11:00 UTC-0400
-            </p>
-        </div>
+        <ng-container *ngIf="getData">
+            <div class="text2">
+                {{lastUpdatedd}}
+            </div>
+        </ng-container>
+
+
+
     </div>
 
 </div>

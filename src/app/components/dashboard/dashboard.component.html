@@ -1,49 +1,67 @@
 <div class="container">
-
     <p class="textr aline"><b class="textrb">UPTIME</b>&nbsp;&nbsp;Last 30 days</p>
-
-
     <div class="bars-container">
         <div class="rect1">
             <div class="conR2">
                 <p class="textrb">Sigo APP</p>
                 <p class="textr">98%</p>
             </div>
+            <div class="statusData1">
+                <div *ngFor="let dato of barsStatus1">
+                    <div [ngClass]="{'barraSt': true,'barraSt1': dato >= 80, 'barraSt2': dato >= 60 && dato < 80,
+                         'barraSt3': dato < 60}">
+                    </div>
+                </div>
+            </div>
             <div class="conR2">
                 <div class="cirUp">
                     <div class="circulo"></div>
-                    <p class="textr up">Up</p>
+                    <ng-container>
+                        <div class="text2">
+                            {{currentStatus1}}
+                        </div>
+                    </ng-container>
                 </div>
                 <p class="textr">Today</p>
             </div>
-
         </div>
         <hr class="verticalLine1">
         <div class="rect2">
             <div class="conR2">
-                <p class="textr">Traking</p>
+                <ng-container>
+                    <div class="text2">
+                        {{dateTraking}}
+                    </div>
+                </ng-container>
                 <p class="textr">100</p>
+            </div>
+            <div class="statusData2">
+                <div *ngFor="let dato of barsStatus2">
+                    <div [ngClass]="{'barraSt': true,'barraSt1': dato >= 80, 'barraSt2': dato >= 60 && dato < 80,
+                         'barraSt3': dato < 60}">
+                    </div>
+                </div>
             </div>
             <div class="conR2">
                 <div class="cirUp">
                     <div class="circulo"></div>
-                    <p class="textr up">Up</p>
+                    <ng-container *ngIf="getData">
+                        <div class="text2">
+                            {{currentStatus2}}
+                        </div>
+                    </ng-container>
                 </div>
                 <p class="textr">Today</p>
             </div>
-
-
         </div>
-
     </div>
     <p class="over"><b class="textrb">OVERALL UPTIME</b></p>
     <div class="prueba">
         <div class="rect3">
-
             <div class="contG">
                 <div>
-                    <p class="textr">100%</p>
-                    <p class="textr">Last 24 days</p>
+                    <p class="textr">{{porcen1}}%</p>
+                    <p class="textr">Last 24 hours</p>
                 </div>
                 <hr class="verticalLine">
                 <div>
